@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Prenume Nume — Web Designer & Front‑End Developer</title>
-  <meta name="description" content="Site de prezentare elegant, rapid și responsive. Creat pentru freelanceri și mici afaceri. Găzduire gratuită prin GitHub Pages." />
+  <title>Prenume Nume — Student | CV & Proiecte</title>
+  <meta name="description" content="Site personal de student: CV, proiecte și contact. Găzduit gratuit pe GitHub Pages." />
   <meta name="theme-color" content="#0b1020" />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' x2='1' y1='1' y2='0'%3E%3Cstop stop-color='%237c9cff'/%3E%3Cstop stop-color='%2374f0d4' offset='1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect rx='14' width='64' height='64' fill='%230b1020'/%3E%3Cpath d='M16 44c8-20 24-20 32 0' fill='url(%23g)'/%3E%3Ccircle cx='32' cy='24' r='8' fill='url(%23g)'/%3E%3C/svg%3E" />
-  <meta property="og:title" content="Prenume Nume — Web Designer & Front‑End Developer" />
-  <meta property="og:description" content="Site de prezentare elegant, rapid și responsive. Creat pentru freelanceri și mici afaceri." />
+  <meta property="og:title" content="Prenume Nume — Student | CV & Proiecte" />
+  <meta property="og:description" content="Site personal de student: CV, proiecte și contact." />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://picsum.photos/1200/630?random=3" />
+  <meta property="og:image" content="https://picsum.photos/1200/630?random=7" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
@@ -59,8 +59,10 @@
     .blob{position:absolute;inset:-140px -180px auto auto;width:560px;height:560px;background:radial-gradient(circle at 30% 30%, rgba(124,156,255,.5), transparent 60%), radial-gradient(circle at 70% 70%, rgba(116,240,212,.4), transparent 50%);filter:blur(40px);opacity:.6;pointer-events:none}
     .card{background:var(--glass);border:1px solid #1b2555;border-radius:var(--radius);box-shadow:var(--shadow)}
     .hero-sample{padding:16px}
-    .code{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; background:#0b142f;border-radius:12px;padding:18px;overflow:auto;font-size:13px;border:1px solid #1b2555}
-    .avatar{width:140px;height:140px;border-radius:50%;overflow:hidden;border:3px solid rgba(124,156,255,.5);box-shadow:var(--shadow)}
+    .avatar{width:144px;height:144px;border-radius:50%;overflow:hidden;border:3px solid rgba(124,156,255,.5);box-shadow:var(--shadow)}
+    .pill{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;border:1px solid #2a356d;background:#0f173a;font-size:12px;color:var(--muted)}
+    .skills{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
+    .skill{font-size:12px;border:1px solid #2a356d;border-radius:999px;padding:6px 10px;color:var(--muted);background:#0e1636}
     /* SECTIONS */
     section{padding:76px 0}
     h2{font-size:30px;margin:0 0 14px}
@@ -70,25 +72,31 @@
     .grid.cols-2{grid-template-columns:repeat(2,1fr)}
     .feature{padding:18px}
     .feature h3{margin:8px 0}
-    .portfolio .item{overflow:hidden;position:relative}
-    .portfolio .item img{border-radius:14px;transition:transform .4s ease}
-    .portfolio .item:hover img{transform:scale(1.04)}
-    .portfolio .caption{position:absolute;left:12px;bottom:12px;background:rgba(11,16,32,.7);padding:6px 10px;border-radius:10px;font-size:12px;border:1px solid #1b2555}
+    .projects .item{position:relative;overflow:hidden}
+    .projects .item img{border-radius:14px;transition:transform .4s ease}
+    .projects .item:hover img{transform:scale(1.04)}
+    .projects .caption{position:absolute;left:12px;bottom:12px;background:rgba(11,16,32,.7);padding:6px 10px;border-radius:10px;font-size:12px;border:1px solid #1b2555}
+    .badge{font-size:12px;border:1px solid #2a356d;border-radius:999px;padding:6px 10px;color:var(--muted)}
+    .timeline{display:grid;gap:12px}
+    .entry{padding:16px;border:1px solid #1b2555;border-radius:14px;background:#0f173a}
+    .entry h3{margin:0 0 4px}
+    .entry .meta{color:var(--muted);font-size:13px;margin-bottom:8px}
     .contact-card{padding:22px;display:grid;gap:12px}
     .contact-actions{display:flex;gap:12px;flex-wrap:wrap}
-    .badge{font-size:12px;border:1px solid #2a356d;border-radius:999px;padding:6px 10px;color:var(--muted)}
-    .stats{display:flex;gap:14px;flex-wrap:wrap;margin-top:12px}
-    .stat{padding:10px 14px;border:1px solid #1b2555;border-radius:12px;background:#0e1636}
-    .prices .card{padding:22px}
-    .price{font-size:28px;font-weight:800;margin:6px 0}
-    .pill{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;border:1px solid #2a356d;background:#0f173a;font-size:12px;color:var(--muted)}
-    blockquote{margin:0;padding:18px;border-left:3px solid var(--accent);background:#0f1636;border-radius:12px}
     footer{border-top:1px solid #1b2555;color:#98a3da}
     footer .foot{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;padding:22px 0}
     .small{font-size:12px;color:#8f9bdb}
     /* REVEAL ANIM */
     .reveal{opacity:0;transform:translateY(12px);transition:opacity .5s ease, transform .5s ease}
     .reveal.show{opacity:1;transform:none}
+    /* PRINT CV */
+    @media print{
+      header, .hero, #despre, #proiecte, #contact, footer { display:none !important; }
+      #cv { padding:0; }
+      body{background:#fff;color:#111}
+      .card, .entry{background:#fff;border:1px solid #ddd}
+      a{color:#000}
+    }
     /* RESPONSIVE */
     @media (max-width: 900px){
       .hero-inner{grid-template-columns:1fr;gap:26px;padding:60px 0}
@@ -107,14 +115,13 @@
     <div class="container nav">
       <div class="brand">
         <div class="logo" aria-hidden="true"></div>
-        <a href="#acasa" class="name">Prenume Nume</a>
+        <a href="#acasa" class="name">Prenume Nume</a><!-- TODO: înlocuiește cu numele tău -->
       </div>
       <nav aria-label="Meniu principal">
         <ul>
           <li><a href="#despre">Despre</a></li>
-          <li><a href="#servicii">Servicii</a></li>
-          <li><a href="#portofoliu">Portofoliu</a></li>
-          <li><a href="#preturi">Prețuri</a></li>
+          <li><a href="#proiecte">Proiecte</a></li>
+          <li><a href="#cv">CV</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
@@ -126,36 +133,33 @@
     <div class="blob" aria-hidden="true"></div>
     <div class="container hero-inner">
       <div>
-        <span class="tag"><span>👋</span> Salut! Eu sunt <strong>Prenume Nume</strong></span>
-        <h1 class="title"><span>Web Designer</span> & Front‑End Developer</h1>
-        <p class="subtitle">Construiesc site‑uri rapide și elegante pentru freelanceri și afaceri locale. Focus pe claritate, conversii și performanță pe mobil.</p>
+        <span class="tag"><span>🎓</span> Student — <strong>Programul / Specializarea</strong></span><!-- TODO: editează specializarea -->
+        <h1 class="title"><span>CV & Proiecte</span> — Prenume Nume</h1><!-- TODO: numele tău -->
+        <p class="subtitle">Interesat de <strong>tehnologii web</strong> și proiecte practice. Îmi place să învăț lucruri noi și să lucrez la idei utile.</p>
         <div class="cta">
-          <a class="btn primary" href="#contact">Cere ofertă</a>
-          <a class="btn" href="#portofoliu">Vezi portofoliul</a>
-          <a class="btn" href="mailto:hello@prenume-nume.ro?subject=Colaborare">hello@prenume-nume.ro</a>
+          <a class="btn primary" href="#cv">Vezi CV</a>
+          <a class="btn" href="#proiecte">Vezi proiectele</a>
+          <a class="btn" href="mailto:hello@prenume-nume.ro?subject=Salut!" title="Trimite-mi un email">hello@prenume-nume.ro</a><!-- TODO: emailul tău -->
         </div>
-        <div class="stats">
-          <div class="stat"><strong>3+ ani</strong><br><span class="small">experiență</span></div>
-          <div class="stat"><strong>25+</strong><br><span class="small">proiecte livrate</span></div>
-          <div class="stat"><strong>⭑⭑⭑⭑⭑</strong><br><span class="small">feedback clienți</span></div>
+        <div class="skills">
+          <span class="skill">HTML</span>
+          <span class="skill">CSS</span>
+          <span class="skill">JavaScript</span>
+          <span class="skill">Git/GitHub</span>
+          <span class="skill">(adauga skilluri)</span><!-- TODO: editează competențele -->
         </div>
       </div>
       <div class="hero-art card hero-sample reveal">
         <div style="display:flex;align-items:center;gap:16px;padding:8px 8px 0 8px">
-          <div class="avatar"><img src="https://picsum.photos/seed/avatar/400/400" alt="Avatar"/></div>
+          <div class="avatar"><img src="https://picsum.photos/seed/student/400/400" alt="Avatar"/></div><!-- TODO: schimbă poza -->
           <div>
-            <div class="pill">📍 București • disponibil remote</div>
-            <div class="pill" style="margin-top:8px">⚙️ HTML • CSS • JS • SEO</div>
+            <div class="pill">📍 Oraș (ex. București)</div><!-- TODO: orașul -->
+            <div class="pill" style="margin-top:8px">📧 <a href="mailto:hello@prenume-nume.ro">hello@prenume-nume.ro</a></div><!-- TODO: emailul -->
           </div>
         </div>
-        <div class="code" aria-label="Fragment de cod exemplu"><pre><code>&lt;section id="servicii"&gt;
-  &lt;h2&gt;Servicii&lt;/h2&gt;
-  &lt;ul&gt;
-    &lt;li&gt;Site-uri de prezentare&lt;/li&gt;
-    &lt;li&gt;Landing pages cu focus pe conversii&lt;/li&gt;
-    &lt;li&gt;Optimizare SEO de bază&lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/section&gt;</code></pre></div>
+        <div class="card" style="margin:12px; padding:12px">
+          <strong>Următorul pas:</strong> internship/part‑time în domeniu. Deschis la colaborări.
+        </div>
       </div>
     </div>
   </main>
@@ -163,120 +167,126 @@
   <section id="despre">
     <div class="container">
       <h2>Despre mine</h2>
-      <p class="lead">Îmbin designul curat cu implementarea atentă la detalii. Cred în pagini ușor de înțeles, încărcare rapidă și mesaje care conving.</p>
+      <p class="lead">Sunt student la <strong>Universitatea / Facultatea</strong> (anul X). Îmi place să construiesc proiecte mici care rezolvă probleme reale și să învăț prin practică.</p><!-- TODO: universitate + anul -->
       <div class="grid cols-3 reveal">
         <div class="feature card">
-          <span class="badge">⚡ Rapid</span>
-          <h3>Performanță</h3>
-          <p>Arhitectură statică, imagini optimizate și scoruri bune în Lighthouse.</p>
+          <span class="badge">🚀</span>
+          <h3>Învăț rapid</h3>
+          <p>Îmi place să diger documentație și să testez idei până iese ceva fain.</p>
         </div>
         <div class="feature card">
-          <span class="badge">🎯 Clar</span>
-          <h3>UX care convertește</h3>
-          <p>CTA‑uri vizibile, ierarhie bună, texte scurte și clare.</p>
+          <span class="badge">🤝</span>
+          <h3>Lucru în echipă</h3>
+          <p>Experiență în proiecte de grup și colaborare pe GitHub.</p>
         </div>
         <div class="feature card">
-          <span class="badge">🔒 Sigur</span>
-          <h3>HTTPS inclus</h3>
-          <p>Găzduire gratuită cu certificat automat prin GitHub Pages.</p>
+          <span class="badge">⚙️</span>
+          <h3>Stack de bază</h3>
+          <p>HTML, CSS, JS, Git — plus ce mai adaugi pe parcurs (React, Node etc.).</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="servicii">
+  <section id="proiecte" class="projects">
     <div class="container">
-      <h2>Servicii</h2>
-      <p class="lead">De la concept la lansare, tot ce ai nevoie ca să fii online.</p>
+      <h2>Proiecte</h2>
+      <p class="lead">Două proiecte finalizate și unul „pe țeavă”.</p>
       <div class="grid cols-3 reveal">
-        <div class="card feature"><h3>Site de prezentare</h3><p>1–5 secțiuni, design modern, ușor de editat.</p></div>
-        <div class="card feature"><h3>Landing page</h3><p>Pagină de vânzare orientată pe obiective.</p></div>
-        <div class="card feature"><h3>Blog simplu</h3><p>Articole cu SEO de bază, structură semantică.</p></div>
-        <div class="card feature"><h3>Optimizare SEO</h3><p>Meta tag‑uri, viteze bune, schema.org.</p></div>
-        <div class="card feature"><h3>Mentenață</h3><p>Update‑uri, back‑up, mici modificări lunare.</p></div>
-        <div class="card feature"><h3>Consultanță</h3><p>Audit rapid și recomandări aplicabile.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <section id="portofoliu" class="portfolio">
-    <div class="container">
-      <h2>Portofoliu</h2>
-      <p class="lead">Exemple de proiecte recente.</p>
-      <div class="grid cols-3 reveal">
-        <a class="item" href="#" target="_blank" rel="noopener">
-          <img src="https://picsum.photos/seed/p1/600/420" alt="Proiect 1"/>
-          <span class="caption">Brand local — Landing page</span>
+        <!-- PROIECT 1 -->
+        <a class="item card" href="#" target="_blank" rel="noopener">
+          <img src="https://picsum.photos/seed/p1/600/420" alt="Proiect 1"/><!-- TODO: link + imagine -->
+          <div style="padding:14px">
+            <h3>Nume proiect 1</h3><!-- TODO: titlu -->
+            <div class="badge">Rol: dev</div>
+            <p class="small">Tehnologii: HTML, CSS, JS</p><!-- TODO: tehnologii -->
+          </div>
+          <span class="caption">Live / Repo</span>
         </a>
-        <a class="item" href="#" target="_blank" rel="noopener">
+        <!-- PROIECT 2 -->
+        <a class="item card" href="#" target="_blank" rel="noopener">
           <img src="https://picsum.photos/seed/p2/600/420" alt="Proiect 2"/>
-          <span class="caption">ONG — Site de prezentare</span>
+          <div style="padding:14px">
+            <h3>Nume proiect 2</h3>
+            <div class="badge">Rol: dev</div>
+            <p class="small">Tehnologii: HTML, CSS, JS</p>
+          </div>
+          <span class="caption">Live / Repo</span>
         </a>
-        <a class="item" href="#" target="_blank" rel="noopener">
-          <img src="https://picsum.photos/seed/p3/600/420" alt="Proiect 3"/>
-          <span class="caption">Cafenea — Meniu online</span>
-        </a>
-        <a class="item" href="#" target="_blank" rel="noopener">
-          <img src="https://picsum.photos/seed/p4/600/420" alt="Proiect 4"/>
-          <span class="caption">Fotograf — Portofoliu</span>
-        </a>
-        <a class="item" href="#" target="_blank" rel="noopener">
-          <img src="https://picsum.photos/seed/p5/600/420" alt="Proiect 5"/>
-          <span class="caption">Start‑up — Pagina produs</span>
-        </a>
-        <a class="item" href="#" target="_blank" rel="noopener">
-          <img src="https://picsum.photos/seed/p6/600/420" alt="Proiect 6"/>
-          <span class="caption">Pensiune — Rezervări simple</span>
-        </a>
+        <!-- PROIECT 3 (în lucru) -->
+        <div class="item card" aria-label="Proiect în lucru">
+          <img src="https://picsum.photos/seed/wip/600/420" alt="Proiect în lucru"/>
+          <div style="padding:14px">
+            <h3>Proiect 3 — în lucru</h3>
+            <div class="badge">🔧 WIP</div>
+            <p class="small">Descriere scurtă + ce urmează.</p>
+          </div>
+          <span class="caption">În curând</span>
+        </div>
       </div>
     </div>
   </section>
 
-  <section id="testimoniale">
+  <section id="cv">
     <div class="container">
-      <h2>Ce spun clienții</h2>
-      <div class="grid cols-3 reveal">
-        <blockquote class="card">“Am lansat mai repede decât mă așteptam și am primit feedback excelent de la clienți.”<br><span class="small">— Andreea, antreprenor</span></blockquote>
-        <blockquote class="card">“Proces clar, comunicare foarte bună și un site care chiar se mișcă repede.”<br><span class="small">— Mihai, consultant</span></blockquote>
-        <blockquote class="card">“A înțeles brandul nostru din prima și a venit cu idei utile.”<br><span class="small">— Ioana, ONG</span></blockquote>
+      <h2>CV</h2>
+      <p class="lead">Rezumatul meu: studii, activități și abilități. Poți descărca varianta PDF.</p>
+      <div class="cta" style="margin-bottom:16px">
+        <a class="btn primary" href="assets/CV_Prenume_Nume.pdf" download>Descarcă PDF</a><!-- TODO: încarcă PDF și actualizează calea -->
+        <button class="btn" onclick="window.print()">Printează</button>
+        <a class="btn" href="https://github.com/username" target="_blank" rel="noopener">GitHub</a><!-- TODO: username GitHub -->
+        <a class="btn" href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a><!-- TODO: profil LinkedIn -->
       </div>
-    </div>
-  </section>
 
-  <section id="preturi" class="prices">
-    <div class="container">
-      <h2>Prețuri</h2>
-      <p class="lead">Pachete orientative — se pot adapta în funcție de nevoi.</p>
-      <div class="grid cols-3 reveal">
-        <div class="card">
-          <h3>Start</h3>
-          <div class="price">€199</div>
-          <ul>
-            <li>1 pagină (landing)</li>
-            <li>Design modern</li>
-            <li>Publicare pe GitHub Pages</li>
-          </ul>
-          <a class="btn" href="#contact">Alege pachetul</a>
+      <div class="grid cols-2">
+        <!-- Col 1 -->
+        <div class="reveal">
+          <h3>Educație</h3>
+          <div class="timeline">
+            <div class="entry">
+              <h3>Universitatea / Facultatea — Specializarea</h3><!-- TODO -->
+              <div class="meta">2023–2026 · Oraș</div><!-- TODO: ani -->
+              <p>Cursuri relevante: Algoritmi, Structuri de Date, Baze de Date, Web.</p><!-- TODO: cursuri -->
+            </div>
+            <div class="entry">
+              <h3>Liceu — Profil</h3><!-- TODO -->
+              <div class="meta">2019–2023 · Oraș</div>
+              <p>Olimpiade / proiecte școlare notabile (dacă ai).</p>
+            </div>
+          </div>
+
+          <h3 style="margin-top:18px">Activități / Experiență</h3>
+          <div class="timeline">
+            <div class="entry">
+              <h3>Voluntariat / Hackathon / Club</h3><!-- TODO -->
+              <div class="meta">2024 · Rol</div>
+              <p>Ce ai făcut, ce ai învățat, rezultatele.</p>
+            </div>
+          </div>
         </div>
-        <div class="card" style="border-color:#2b6fff">
-          <h3>Standard</h3>
-          <div class="price">€399</div>
-          <ul>
-            <li>3–5 secțiuni</li>
-            <li>SEO de bază</li>
-            <li>Asistență la conținut</li>
+
+        <!-- Col 2 -->
+        <div class="reveal">
+          <h3>Competențe</h3>
+          <p class="small">Nivel orientativ: ⭐ începător · ⭐⭐ mediu · ⭐⭐⭐ avansat</p>
+          <ul class="entry">
+            <li>HTML ⭐⭐⭐</li>
+            <li>CSS ⭐⭐</li>
+            <li>JavaScript ⭐⭐</li>
+            <li>Git/GitHub ⭐⭐</li>
+            <li>Altele: React, Node, SQL (după caz)</li>
           </ul>
-          <a class="btn primary" href="#contact">Cel mai popular</a>
-        </div>
-        <div class="card">
-          <h3>Pro</h3>
-          <div class="price">€699</div>
-          <ul>
-            <li>Portofoliu/Blog</li>
-            <li>Optimizări avansate</li>
-            <li>Mentenață 1 lună</li>
+
+          <h3 style="margin-top:18px">Limbi străine</h3>
+          <ul class="entry">
+            <li>Română — nativ</li>
+            <li>Engleză — B2/C1</li><!-- TODO: actualizează -->
           </ul>
-          <a class="btn" href="#contact">Cere ofertă</a>
+
+          <h3 style="margin-top:18px">Premii / Realizări</h3>
+          <ul class="entry">
+            <li>Mențiune hackathon universitar — 2024</li><!-- TODO: exemple -->
+          </ul>
         </div>
       </div>
     </div>
@@ -286,22 +296,22 @@
     <div class="container">
       <div class="card contact-card reveal">
         <h2>Contact</h2>
-        <p class="lead">Spune‑mi pe scurt ce ai nevoie și revin cu o propunere.</p>
+        <p class="lead">Dacă vrei să vorbim, scrie-mi un email sau un mesaj.</p>
         <div class="contact-actions">
-          <a class="btn primary" href="mailto:hello@prenume-nume.ro?subject=Cerere%20oferta%20site">Trimite email</a>
-          <a class="btn" href="https://wa.me/40123456789" target="_blank" rel="noopener">Scrie pe WhatsApp</a>
-          <a class="btn" href="https://github.com/username" target="_blank" rel="noopener">GitHub</a>
-          <a class="btn" href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn primary" href="mailto:hello@prenume-nume.ro?subject=Salut%20%F0%9F%91%8B">Trimite email</a><!-- TODO: email -->
+          <a class="btn" href="https://wa.me/40123456789" target="_blank" rel="noopener">WhatsApp</a><!-- TODO: telefon -->
+          <a class="btn" href="https://github.com/username" target="_blank" rel="noopener">GitHub</a><!-- TODO: GitHub -->
+          <a class="btn" href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a><!-- TODO: LinkedIn -->
         </div>
-        <p class="small">Poți conecta un domeniu propriu la GitHub Pages în câțiva pași.</p>
+        <p class="small">Găzduire gratuită prin GitHub Pages. Codul e open-source în repo-ul meu.</p>
       </div>
     </div>
   </section>
 
   <footer>
     <div class="container foot">
-      <div>© <span id="year"></span> Prenume Nume</div>
-      <div class="small">Realizat cu GitHub Pages • <a href="#acasa">sus ↑</a></div>
+      <div>© <span id="year"></span> Prenume Nume</div><!-- TODO: nume -->
+      <div class="small"><a href="#cv">CV</a> • <a href="#proiecte">Proiecte</a> • <a href="#acasa">sus ↑</a></div>
     </div>
   </footer>
 
@@ -339,7 +349,11 @@
     "@type": "Person",
     "name": "Prenume Nume",
     "url": "https://username.github.io/",
-    "jobTitle": "Web Designer & Front‑End Developer",
+    "jobTitle": "Student / Junior Web Developer",
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "Universitatea / Facultatea"
+    },
     "sameAs": [
       "https://github.com/username",
       "https://www.linkedin.com/"
