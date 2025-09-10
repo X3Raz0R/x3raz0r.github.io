@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="ro">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Numele Meu — Site de prezentare</title>
+  <meta name="description" content="Site de prezentare simplu și modern, găzduit gratuit pe GitHub Pages." />
+  <meta property="og:title" content="Numele Meu — Site de prezentare" />
+  <meta property="og:description" content="Site de prezentare simplu și modern, găzduit gratuit pe GitHub Pages." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://picsum.photos/1200/630" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg: #0b1020;/* fundal închis albastru-navy */
+      --card:#101733;/* carduri */
+      --text:#e8ecff;/* text deschis */
+      --muted:#aab4e6;/* text secundar */
+      --accent:#7c9cff;/* accent albastru */
+      --accent-2:#74f0d4;/* accent verde-mentă */
+      --shadow: 0 10px 30px rgba(0,0,0,.25);
+      --radius: 18px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    .container{max-width:1100px;margin:0 auto;padding:0 20px}
+    /* NAV */
+    header{position:sticky;top:0;z-index:50;background:linear-gradient(180deg, rgba(11,16,32,.9), rgba(11,16,32,.7) 60%, rgba(11,16,32,0));backdrop-filter:saturate(160%) blur(8px)}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.5px}
+    .brand .logo{width:36px;height:36px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--accent-2));box-shadow:var(--shadow)}
+    nav ul{display:flex;gap:18px;list-style:none;margin:0;padding:0}
+    nav a{opacity:.9}
+    nav a:hover{opacity:1;text-decoration:underline}
+    .menu-btn{display:none}
+    /* HERO */
+    .hero{position:relative;overflow:hidden}
+    .hero-inner{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:center;padding:80px 0}
+    .tag{display:inline-flex;align-items:center;gap:8px;border:1px solid #2a356d;color:var(--muted);padding:6px 10px;border-radius:999px;font-size:12px}
+    .title{font-size:48px;line-height:1.05;margin:16px 0 12px}
+    .subtitle{color:var(--muted);font-size:18px;margin-bottom:24px}
+    .cta{display:flex;flex-wrap:wrap;gap:12px}
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 18px;border-radius:999px;border:1px solid #2a356d;background:#11183a;color:#fff;box-shadow:var(--shadow)}
+    .btn.primary{background:linear-gradient(135deg,var(--accent),var(--accent-2));color:#0a0f1f;border:0;font-weight:700}
+    .hero-art{position:relative}
+    .blob{position:absolute;inset:-120px -180px auto auto;width:520px;height:520px;background:radial-gradient(circle at 30% 30%, rgba(124,156,255,.5), transparent 60%), radial-gradient(circle at 70% 70%, rgba(116,240,212,.4), transparent 50%);filter:blur(40px);opacity:.7;pointer-events:none}
+    .card{background:var(--card);border:1px solid #1b2555;border-radius:var(--radius);box-shadow:var(--shadow)}
+    .hero-sample{padding:14px}
+    .code{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; background:#0b142f;border-radius:12px;padding:18px;overflow:auto;font-size:13px;border:1px solid #1b2555}
+    /* SECTIONS */
+    section{padding:70px 0}
+    h2{font-size:28px;margin:0 0 14px}
+    p.lead{color:var(--muted)}
+    .grid{display:grid;gap:18px}
+    .grid.cols-3{grid-template-columns:repeat(3,1fr)}
+    .grid.cols-2{grid-template-columns:repeat(2,1fr)}
+    .feature{padding:18px}
+    .feature h3{margin:8px 0}
+    .portfolio .item{overflow:hidden}
+    .portfolio .item img{border-radius:14px;transition:transform .4s ease}
+    .portfolio .item:hover img{transform:scale(1.04)}
+    .contact-card{padding:22px;display:grid;gap:12px}
+    .contact-actions{display:flex;gap:12px;flex-wrap:wrap}
+    .badge{font-size:12px;border:1px solid #2a356d;border-radius:999px;padding:6px 10px;color:var(--muted)}
+    footer{border-top:1px solid #1b2555;color:#98a3da}
+    footer .foot{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;padding:22px 0}
+    .small{font-size:12px;color:#8f9bdb}
+    /* RESPONSIVE */
+    @media (max-width: 900px){
+      .hero-inner{grid-template-columns:1fr;gap:26px;padding:50px 0}
+      .title{font-size:38px}
+      .grid.cols-3{grid-template-columns:1fr 1fr}
+    }
+    @media (max-width: 640px){
+      nav ul{display:none}
+      .menu-btn{display:inline-flex;align-items:center;gap:8px;border:1px solid #2a356d;padding:8px 12px;border-radius:10px;background:#0e1636}
+      .grid.cols-3,.grid.cols-2{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <a href="#acasa" class="name">Numele Meu</a>
+      </div>
+      <nav aria-label="Meniu principal">
+        <ul>
+          <li><a href="#despre">Despre</a></li>
+          <li><a href="#servicii">Servicii</a></li>
+          <li><a href="#portofoliu">Portofoliu</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mobileMenu">Meniu</button>
+    </div>
+  </header>
+
+  <main id="acasa" class="hero">
+    <div class="blob" aria-hidden="true"></div>
+    <div class="container hero-inner">
+      <div>
+        <span class="tag"><span>👋</span> Salut! Eu sunt <strong>Numele Tău</strong></span>
+        <h1 class="title">Freelancer / Designer / Dezvoltator web</h1>
+        <p class="subtitle">Ajut afacerile mici să aibă o prezență online modernă și eficientă. Construiesc site-uri rapide, responsive și ușor de întreținut.</p>
+        <div class="cta">
+          <a class="btn primary" href="#contact">Cere o ofertă</a>
+          <a class="btn" href="#portofoliu">Vezi portofoliul</a>
+        </div>
+      </div>
+      <div class="hero-art card hero-sample">
+        <div class="code" aria-label="Fragment de cod exemplu"><pre><code>&lt;section id="servicii"&gt;
+  &lt;h2&gt;Servicii&lt;/h2&gt;
+  &lt;ul&gt;
+    &lt;li&gt;Site-uri de prezentare&lt;/li&gt;
+    &lt;li&gt;Optimizare SEO de bază&lt;/li&gt;
+    &lt;li&gt;Mentenață &amp; suport&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/section&gt;</code></pre></div>
+      </div>
+    </div>
+  </main>
+
+  <section id="despre">
+    <div class="container">
+      <h2>Despre mine</h2>
+      <p class="lead">Am peste 3 ani experiență în realizarea de site‑uri prietenoase și performante. Îmi place să lucrez cu antreprenori, ONG‑uri și proiecte locale.</p>
+      <div class="grid cols-3">
+        <div class="feature card">
+          <span class="badge">⚡ Rapid</span>
+          <h3>Performanță</h3>
+          <p>Arhitectură statică, imagini optimizate, bună experiență pe mobil.</p>
+        </div>
+        <div class="feature card">
+          <span class="badge">🎯 Clar</span>
+          <h3>UX curat</h3>
+          <p>Pagini simple, mesaje clare, CTA‑uri vizibile care convertesc.</p>
+        </div>
+        <div class="feature card">
+          <span class="badge">🔒 Sigur</span>
+          <h3>HTTPS inclus</h3>
+          <p>Găzduire gratuită cu certificat automat prin GitHub Pages.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="servicii">
+    <div class="container">
+      <h2>Servicii</h2>
+      <p class="lead">Tot ce ai nevoie ca să fii online:
+      </p>
+      <div class="grid cols-3">
+        <div class="card feature"><h3>Site de prezentare</h3><p>1–5 secțiuni, design modern, ușor de editat.</p></div>
+        <div class="card feature"><h3>Landing page</h3><p>Pagini de vânzare cu focus pe conversii.</p></div>
+        <div class="card feature"><h3>Optimizare SEO</h3><p>Meta tag‑uri, viteze bune, structură semantică.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="portofoliu" class="portfolio">
+    <div class="container">
+      <h2>Portofoliu</h2>
+      <p class="lead">Câteva exemple de proiecte recente.</p>
+      <div class="grid cols-3">
+        <a class="item" href="#" target="_blank" rel="noopener">
+          <img src="https://picsum.photos/seed/p1/600/400" alt="Proiect 1"/>
+        </a>
+        <a class="item" href="#" target="_blank" rel="noopener">
+          <img src="https://picsum.photos/seed/p2/600/400" alt="Proiect 2"/>
+        </a>
+        <a class="item" href="#" target="_blank" rel="noopener">
+          <img src="https://picsum.photos/seed/p3/600/400" alt="Proiect 3"/>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <div class="card contact-card">
+        <h2>Contact</h2>
+        <p class="lead">Spune‑mi pe scurt ce ai nevoie și revin cu o propunere.</p>
+        <div class="contact-actions">
+          <a class="btn primary" href="mailto:prenume.nume@example.com?subject=Cerere%20oferta%20site">Trimite email</a>
+          <a class="btn" href="https://wa.me/40123456789" target="_blank" rel="noopener">Scrie pe WhatsApp</a>
+        </div>
+        <p class="small">Preferi un domeniu propriu? Îl poți conecta ușor la GitHub Pages.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container foot">
+      <div>© <span id="year"></span> Numele Meu</div>
+      <div class="small">Realizat cu GitHub Pages • <a href="#acasa">sus ↑</a></div>
+    </div>
+  </footer>
+
+  <script>
+    // an navigare lină
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click',e=>{
+        const href = a.getAttribute('href');
+        const target = document.querySelector(href);
+        if(target){ e.preventDefault(); target.scrollIntoView({behavior:'smooth', block:'start'}); }
+      });
+    });
+    // an meniu mobil simplu (opțional: completează după nevoie)
+    const btn = document.getElementById('menuBtn');
+    btn?.addEventListener('click',()=>{
+      const nav = document.querySelector('nav ul');
+      const isOpen = getComputedStyle(nav).display !== 'none';
+      nav.style.display = isOpen ? 'none' : 'flex';
+      btn.setAttribute('aria-expanded', String(!isOpen));
+    });
+    // an anul curent în footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
