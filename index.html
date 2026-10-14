@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Medeleanu Antonio — Software Engineer</title>
+<meta name="description" content="Economic Informatics student at ASE Bucharest. Builds data automation pipelines and full-stack apps. 1st place, VibeHack 2026.">
+<style>
+  :root{
+    --bg:#f5f3ee;
+    --ink:#121212;
+    --accent:#2457e8;
+    --accent-ink:#ffffff;
+    --muted:#5c594f;
+    --line:1px solid var(--ink);
+    --font-display:"Archivo Black","Arial Black",sans-serif;
+    --font-body:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    --font-mono:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+    --max:72rem;
+    --gutter:clamp(1.25rem,4vw,3rem);
+    --section-gap:clamp(4rem,8vw,7rem);
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-body);font-size:1.0625rem;line-height:1.5;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gutter)}
+  a{color:inherit}
+  .label{font-family:var(--font-mono);font-size:.75rem;letter-spacing:.08em;text-transform:uppercase}
+  .muted{color:var(--muted)}
+
+  /* header */
+  header.site{position:sticky;top:0;z-index:10;background:var(--bg);border-bottom:var(--line)}
+  .site-header{display:flex;align-items:center;justify-content:space-between;padding:1.1rem var(--gutter)}
+  .brand{font-weight:800;text-decoration:none;font-size:1.05rem;letter-spacing:-.01em}
+  nav.nav{display:flex;gap:1.5rem}
+  nav.nav a{text-decoration:none}
+  nav.nav a:hover{color:var(--accent)}
+  .cv-pill{border:var(--line);border-radius:999px;padding:.4rem .9rem;text-decoration:none;display:inline-flex;align-items:center;gap:.4rem}
+  .cv-pill:hover{background:var(--ink);color:var(--bg)}
+  @media (max-width:720px){nav.nav{display:none}}
+
+  /* hero */
+  .hero{padding:clamp(3rem,8vw,6rem) var(--gutter) clamp(2rem,5vw,3rem)}
+  .eyebrow{display:flex;align-items:center;gap:.5rem;margin:0 0 1rem}
+  h1.title{font-family:var(--font-display);font-weight:900;font-size:clamp(2.75rem,9vw,6rem);line-height:.95;letter-spacing:-.02em;margin:0 0 1rem}
+  .roles{display:flex;flex-wrap:wrap;gap:.6rem;align-items:center;margin:0 0 1.25rem}
+  .roles span.sep{opacity:.4}
+  .lede{max-width:40rem;font-size:var(--fs-lg,1.2rem);color:var(--muted);margin:0 0 2rem}
+  .hero-actions{display:flex;gap:1rem;align-items:center;flex-wrap:wrap}
+  .btn{display:inline-flex;align-items:center;gap:.5rem;background:var(--accent);color:var(--accent-ink);text-decoration:none;padding:.8rem 1.4rem;border-radius:999px;font-weight:600}
+  .btn:hover{opacity:.88}
+  .link-arrow{text-decoration:underline;text-underline-offset:3px}
+
+  /* stats */
+  .stats{display:grid;grid-template-columns:repeat(3,1fr);border-top:var(--line);border-bottom:var(--line);margin:var(--section-gap) 0}
+  .stat{padding:1.75rem var(--gutter);border-left:var(--line)}
+  .stat:first-child{border-left:none}
+  .stat__num{display:block;font-family:var(--font-display);font-size:clamp(2.25rem,5vw,3.5rem);font-weight:900;line-height:1}
+  @media (max-width:640px){.stats{grid-template-columns:1fr}.stat{border-left:none;border-top:var(--line)}.stat:first-child{border-top:none}}
+
+  /* section */
+  .section{padding-bottom:var(--section-gap)}
+  .section__head{display:flex;align-items:baseline;gap:1rem;justify-content:space-between;border-bottom:var(--line);padding-bottom:1rem;margin-bottom:2.5rem;flex-wrap:wrap}
+  .section__title{font-family:var(--font-display);font-weight:900;font-size:clamp(2rem,5vw,3.25rem);margin:0;letter-spacing:-.02em}
+  .section__index{color:var(--accent)}
+
+  /* experience rows */
+  .row{display:grid;grid-template-columns:10rem 1fr;gap:1.5rem;padding:2rem 0;border-bottom:1px solid #d8d4c8}
+  .row:last-child{border-bottom:none}
+  .row__title{margin:0 0 .2rem;font-size:1.3rem;font-weight:700}
+  .row__org{margin:0 0 .9rem;color:var(--accent);font-weight:600}
+  .row ul{margin:0;padding-left:1.1rem;color:var(--muted)}
+  .row li{margin-bottom:.4rem}
+  @media (max-width:640px){.row{grid-template-columns:1fr;gap:.4rem}}
+
+  /* achievements */
+  .awards{display:flex;flex-direction:column}
+  .award{border-bottom:1px solid #d8d4c8;padding:1.3rem 0}
+  .award:first-child{border-top:var(--line)}
+  .award__summary{display:grid;grid-template-columns:3.5rem 1fr auto;align-items:center;gap:1rem;cursor:pointer;list-style:none}
+  .award__summary::-webkit-details-marker{display:none}
+  .place{font-family:var(--font-display);font-weight:900;background:var(--accent);color:#fff;border-radius:50%;width:3.2rem;height:3.2rem;display:flex;align-items:center;justify-content:center;font-size:.9rem}
+  .award__title{font-weight:700;font-size:1.1rem;display:block}
+  .award__line{color:var(--muted);display:block;font-size:.95rem;margin-top:.15rem}
+  .award__meta{text-align:right;color:var(--muted)}
+  .award__body{margin:1rem 0 0 4.5rem;color:var(--muted);max-width:40rem}
+  @media (max-width:640px){.award__summary{grid-template-columns:2.5rem 1fr}.award__meta{display:none}.award__body{margin-left:0}}
+
+  /* projects */
+  .projects-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
+  .project{border:var(--line);border-radius:1rem;padding:1.75rem;background:#fff}
+  .project__title{margin:0 0 .3rem;font-size:1.25rem;font-weight:800}
+  .project__tag{display:inline-block;background:var(--accent);color:#fff;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;padding:.25rem .6rem;border-radius:999px;margin-bottom:.8rem}
+  .project p{color:var(--muted);margin:0 0 1rem}
+  .project ul{color:var(--muted);padding-left:1.1rem;margin:0}
+  @media (max-width:720px){.projects-grid{grid-template-columns:1fr}}
+
+  /* education + skills */
+  .two-col{display:grid;grid-template-columns:1fr 1fr;gap:3rem}
+  @media (max-width:720px){.two-col{grid-template-columns:1fr}}
+  .edu-item{margin-bottom:1.5rem}
+  .edu-item h3{margin:0 0 .2rem;font-size:1.1rem}
+  .edu-item p{margin:0;color:var(--muted)}
+  .skill-group{margin-bottom:1.2rem}
+  .skill-group h4{margin:0 0 .5rem;font-family:var(--font-mono);font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+  .chips{display:flex;flex-wrap:wrap;gap:.5rem}
+  .chip{border:var(--line);border-radius:999px;padding:.3rem .8rem;font-size:.85rem}
+
+  /* contact */
+  .contact{text-align:center;padding:var(--section-gap) var(--gutter);border-top:var(--line)}
+  .contact h2{font-family:var(--font-display);font-weight:900;font-size:clamp(2.25rem,7vw,4.5rem);margin:0 0 1rem;letter-spacing:-.02em}
+  .contact a.email{display:inline-block;color:var(--accent);text-decoration:none;font-size:clamp(1.5rem,5vw,2.75rem);font-weight:800;margin:1rem 0;word-break:break-all}
+  .contact-links{display:flex;gap:1.5rem;justify-content:center;flex-wrap:wrap;margin-top:1rem}
+
+  footer{padding:2rem var(--gutter);text-align:center;color:var(--muted);font-size:.85rem}
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="site-header">
+    <a class="brand" href="#top">Antonio Medeleanu</a>
+    <nav class="nav">
+      <a class="label" href="#experience">Experience</a>
+      <a class="label" href="#achievements">Achievements</a>
+      <a class="label" href="#projects">Projects</a>
+      <a class="label" href="#about">About</a>
+      <a class="label" href="#contact">Contact</a>
+    </nav>
+    <a class="cv-pill label" href="https://drive.google.com/" target="_blank" rel="noopener">CV ↗</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero wrap">
+    <p class="eyebrow label muted">★ Bucharest, Romania</p>
+    <h1 class="title">Medeleanu<br>Antonio</h1>
+    <p class="roles label">
+      <span>Software Engineer</span><span class="sep">·</span>
+      <span>1st place, VibeHack 2026</span><span class="sep">·</span>
+      <span>Economic Informatics Student</span>
+    </p>
+    <p class="lede">I automate data workflows with Python and SQL, and build full-stack apps with React and Supabase. Looking for a software engineering internship where I can keep shipping things people actually use.</p>
+    <div class="hero-actions">
+      <a class="btn" href="#experience">See my work ↓</a>
+      <a class="link-arrow label" href="#achievements">See the hackathon win</a>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <ul class="stats" aria-label="In numbers">
+      <li class="stat"><span class="stat__num">1st</span><span class="label">VibeHack 2026 place</span></li>
+      <li class="stat"><span class="stat__num">2</span><span class="label">Internships / practicums</span></li>
+      <li class="stat"><span class="stat__num">1</span><span class="label">App live on Google Play</span></li>
+    </ul>
+  </div>
+
+  <!-- Experience -->
+  <section class="section wrap" id="experience">
+    <div class="section__head">
+      <h2 class="section__title">Experience</h2>
+      <p class="label muted section__index">01 — Work</p>
+    </div>
+
+    <article class="row">
+      <p class="label muted">Nov 2025 — Present</p>
+      <div>
+        <h3 class="row__title">Frontend Developer</h3>
+        <p class="row__org">Sindicatul Studenților din Cibernetică (SISC)</p>
+        <ul>
+          <li>Built and maintained UI components in React, JavaScript, HTML/CSS for internal SISC projects using reusable component patterns.</li>
+          <li>Collaborated with a small team to plan features end-to-end and resolve implementation issues before release.</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="row">
+      <p class="label muted">Mar 2026 — Apr 2026</p>
+      <div>
+        <h3 class="row__title">Data Automation Practicum</h3>
+        <p class="row__org">Procter &amp; Gamble Academic Program</p>
+        <ul>
+          <li>Automated repetitive reporting by building Python/SQL scripts to clean, transform, and aggregate operational datasets, cutting manual processing time.</li>
+          <li>Applied database querying and transformation techniques to improve data consistency and reliability across operational reports.</li>
+        </ul>
+      </div>
+    </article>
+  </section>
+
+  <!-- Achievements -->
+  <section class="section wrap" id="achievements">
+    <div class="section__head">
+      <h2 class="section__title">Achievements</h2>
+      <p class="label muted section__index">02 — Hackathons</p>
+    </div>
+
+    <div class="awards">
+      <details class="award" open>
+        <summary class="award__summary">
+          <span class="place">1st</span>
+          <span>
+            <span class="award__title">VibeHack 2026</span>
+            <span class="award__line">Company-ranking &amp; qualification system using hybrid retrieval.</span>
+          </span>
+          <span class="award__meta label"><span>Veridion Challenge</span></span>
+        </summary>
+        <div class="award__body">
+          <p>Designed a company-ranking and qualification system matching complex user queries against a company database, using hybrid retrieval: structured filtering, embedding similarity search, and selective LLM reasoning. Cut unnecessary LLM calls through pre-filtering and ranking heuristics, improving speed and cost while scoring on NAICS classification, business model, and geographic fit.</p>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section class="section wrap" id="projects">
+    <div class="section__head">
+      <h2 class="section__title">Projects</h2>
+      <p class="label muted section__index">03 — Builds</p>
+    </div>
+
+    <div class="projects-grid">
+      <div class="project">
+        <span class="project__tag">Winning project</span>
+        <h3 class="project__title">VibeHack 2026 — Veridion Challenge</h3>
+        <p>A company-ranking and qualification system matching complex user queries against a company database.</p>
+        <ul>
+          <li>Hybrid retrieval: structured filtering + embedding similarity + selective LLM reasoning</li>
+          <li>Pre-filtering and ranking heuristics to cut unnecessary LLM calls</li>
+          <li>Scored on NAICS classification, business model, and geographic fit</li>
+        </ul>
+      </div>
+      <div class="project">
+        <span class="project__tag">Published, in testing</span>
+        <h3 class="project__title">Macro Tracker App</h3>
+        <p>A React + Supabase mobile app for calorie and macro tracking, live on Google Play in testing.</p>
+        <ul>
+          <li>Real-time tracking with personalized dashboards</li>
+          <li>Integrated external nutrition APIs for detailed food/macro data</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- About / Education / Skills -->
+  <section class="section wrap" id="about">
+    <div class="section__head">
+      <h2 class="section__title">About</h2>
+      <p class="label muted section__index">04 — Background</p>
+    </div>
+
+    <div class="two-col">
+      <div>
+        <div class="edu-item">
+          <h3>B.Sc. Economic Informatics</h3>
+          <p>Bucharest University of Economic Studies (ASE) — Faculty of Cybernetics, Statistics, and Economic Informatics · 2024 – 2027</p>
+        </div>
+        <div class="edu-item">
+          <h3>High School Diploma</h3>
+          <p>Dante Alighieri High School</p>
+        </div>
+        <div class="edu-item">
+          <h3>Certificates</h3>
+          <p>Database Design and Programming with SQL (Oracle Academy) · ECDL</p>
+        </div>
+        <div class="edu-item">
+          <h3>Languages spoken</h3>
+          <p>Romanian (Native) · English (Advanced)</p>
+        </div>
+      </div>
+
+      <div>
+        <div class="skill-group">
+          <h4>Languages</h4>
+          <div class="chips">
+            <span class="chip">C#</span><span class="chip">JavaScript</span><span class="chip">Python</span>
+            <span class="chip">SQL</span><span class="chip">Java</span><span class="chip">C++</span><span class="chip">Bash</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h4>Frameworks / Tools</h4>
+          <div class="chips">
+            <span class="chip">React</span><span class="chip">Node.js</span><span class="chip">Supabase</span>
+            <span class="chip">Git</span><span class="chip">GitHub</span><span class="chip">REST APIs</span><span class="chip">Relational Databases</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<section class="contact" id="contact">
+  <p class="label muted">★ Get in touch</p>
+  <h2>Let's build something.</h2>
+  <a class="email" href="mailto:antoniozzr123@gmail.com">antoniozzr123@gmail.com</a>
+  <div class="contact-links label">
+    <a href="tel:+4073922381">+40 739 223 81</a>
+    <a href="#" target="_blank" rel="noopener">LinkedIn ↗</a>
+    <a href="#" target="_blank" rel="noopener">GitHub ↗</a>
+  </div>
+</section>
+
+<footer>© 2026 Medeleanu Antonio. Built with care.</footer>
+
+</body>
+</html>
