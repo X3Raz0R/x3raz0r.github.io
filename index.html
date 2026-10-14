@@ -67,9 +67,11 @@
   .entry p{margin:0 0 .6rem}
   @media (max-width:540px){.entry{grid-template-columns:1fr;gap:.3rem}}
 
-  .facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1.8rem 2.5rem;margin:0}
-  .facts dt{font-weight:700}
-  .facts dd{margin:.25rem 0 0;color:var(--mist)}
+  .facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,22rem),1fr));gap:3rem 4.5rem;margin:0}
+  .facts > div{border-top:1px solid var(--rule);padding-top:1.1rem}
+  .facts dt{font-weight:700;font-size:1.15rem;margin-bottom:.6rem}
+  .facts dd{margin:0;color:var(--mist);line-height:1.7;max-width:34rem}
+  .facts dd+dd{margin-top:.5rem}
 
   /* contact */
   .contact h2{font-size:clamp(2.2rem,6vw,4rem);font-weight:800;letter-spacing:-.04em;margin-bottom:1.5rem;max-width:14ch}
@@ -163,21 +165,21 @@
       <h2>About</h2>
       <dl class="facts">
         <div>
-          <dt>Education</dt>
-          <dd>B.Sc. Economic Informatics, Bucharest University of Economic Studies (ASE), 2024 to 2027</dd>
-          <dd>Dante Alighieri High School</dd>
+          <dt>Specialties</dt>
+          <dd>Hybrid search (structured filters plus embedding similarity), LLM integration and cost control, ETL and data cleaning, real-time apps with Supabase and PostgreSQL</dd>
         </div>
         <div>
           <dt>Programming languages</dt>
           <dd>Python, SQL, JavaScript, C#, Java, C++, Bash</dd>
         </div>
         <div>
-          <dt>Specialties</dt>
-          <dd>Hybrid search (structured filters plus embedding similarity), LLM integration and cost control, ETL and data cleaning, real-time apps with Supabase and PostgreSQL</dd>
-        </div>
-        <div>
           <dt>Tools</dt>
           <dd>React, Node.js, Supabase, REST APIs, relational databases, Docker, Linux, Git and GitHub</dd>
+        </div>
+        <div>
+          <dt>Education</dt>
+          <dd>B.Sc. Economic Informatics, Bucharest University of Economic Studies (ASE), 2024 to 2027</dd>
+          <dd>Dante Alighieri High School</dd>
         </div>
         <div>
           <dt>Certificates</dt>
